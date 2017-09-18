@@ -6,14 +6,16 @@ class App extends Component {
     return (
       <div className="App">
         <div className="Menu">
-          <span>Welcome to Ooer</span>
-          <a href="ooer.com">Blog</a>
+          <span>Welcome</span>
           <a href="github.com">Github</a>
           <a href="twitter.com">Twitter</a>
           <a href="linkedin.com">LinkedIn</a>
-          <a href="synth.ooer.com">Synthboard</a>
           <a href="test.ooer.com">Test The Web</a>
-          <a href="decks.ooer.com">Decks</a>
+          <a href="test.ooer.com">Decks</a>
+          <a href="ooer.com">Blog</a>
+          <a href="test.ooer.com">Synth</a>
+          <a href="toys.ooer.com">Crispy</a>
+          <a href="toys.ooer.com">Toybox</a>
         </div>
       </div>
     );

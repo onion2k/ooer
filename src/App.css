@@ -3,10 +3,11 @@
   height: 100vh;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
+  background-image: url('topography.png');
 }
 
 .Menu {
-  width: 80vw;
+  width: 70vw;
   align-self: center;
   justify-self: center;
   display: flex;
@@ -15,20 +16,32 @@
 }
 
 span, a {
-  font-size: 5.0em;
-  line-height: 1.0em;
-  font-weight: 700;
-  margin-right: 0.8em;
+  line-height: 5.5rem;
+  font-size: 5.0rem;
+  font-weight: 600;
+  margin-right: 0.8rem;
   text-decoration: none;
+  letter-spacing: -0.1rem;
+  word-spacing: -0.75rem;
+  text-shadow: 1px 1px 2px #aaa;
 }
 
-a:nth-of-type(1) { color: #f6511d; }
-a:nth-of-type(2) { color: #ffe100; }
-a:nth-of-type(3) { color: #00a6ed; }
-a:nth-of-type(4) { color: #7fb800; }
-a:nth-of-type(5) { color: #430c54; }
-a:nth-of-type(6) { color: #f6511d; }
-a:nth-of-type(7) { color: #ffe100; }
-a:nth-of-type(8) { color: #00a6ed; }
-a:nth-of-type(9) { color: #7fb800; }
-a:nth-of-type(10) { color: #430c54; }
+a:nth-of-type(1) { color: #f6511d; z-index: 10; }
+a:nth-of-type(2) { color: #ffe100; z-index: 9; }
+a:nth-of-type(3) { color: #00a6ed; z-index: 8; }
+a:nth-of-type(4) { color: #7fb800; z-index: 7; }
+a:nth-of-type(5) { color: #430c54; z-index: 6; }
+a:nth-of-type(6) { color: #f6511d; z-index: 5; }
+a:nth-of-type(7) { color: #ffe100; z-index: 4; }
+a:nth-of-type(8) { color: #00a6ed; z-index: 3; }
+a:nth-of-type(9) { color: #7fb800; z-index: 2; }
+a:nth-of-type(10) { color: #430c54; z-index: 1; }
+
+.Menu:hover a {
+  opacity: 0.5;
+}
+
+.Menu a:hover {
+  opacity: 1.0;
+  text-shadow: 1px 1px 2px #888;
+} 
