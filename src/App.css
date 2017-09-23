@@ -7,25 +7,32 @@ main {
 }
 
 nav {
-  width: 70vw;
+  width: 65vw;
   align-self: center;
   justify-self: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  transform: rotate(-12.5deg) translateY(-1.0rem);
+  text-align: center;
+  transform: rotate(-12.5deg);
+  padding: 30px;
+  border-left: 15px solid #000;
+  border-right: 15px solid #000;
 }
 
-span, a {
+h1, span, a {
+  display: inline-block;
+  font-variant: small-caps;
   line-height: 5.0rem;
   font-size: 5.0rem;
   font-weight: 600;
   margin: 0.4rem 0.5rem;
   text-decoration: none;
   letter-spacing: -0.1rem;
-  word-spacing: -0.75rem;
+  word-spacing: -1.0rem;
   text-shadow: 1px 1px 2px #888;
   transition: 0.15s transform linear, 0.15s text-shadow linear;
+}
+
+span {
+  color: #aaa;
 }
 
 a:nth-of-type(1) { color: #f6511d; z-index: 10; }

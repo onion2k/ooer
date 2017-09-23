@@ -5,8 +5,9 @@ class App extends Component {
   render() {
     return (
       <nav>
-        <span>Welcome</span>
-        <a href="http://ooer.com">Blog</a>
+        <h1>Welcome</h1>
+        <a href="http://about.ooer.com">About</a>
+        <a href="http://blog.ooer.com">Blog</a>
         <a href="https://github.com/onion2k">Github</a>
         <a href="https://twitter.com/onion2k">Twitter</a>
         <a href="https://linkedin.com/onion2k">LinkedIn</a>
