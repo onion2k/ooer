@@ -4,20 +4,18 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="Menu">
-          <span>Welcome</span>
-          <a href="ooer.com">Blog</a>
-          <a href="github.com">Github</a>
-          <a href="twitter.com">Twitter</a>
-          <a href="linkedin.com">LinkedIn</a>
-          <a href="test.ooer.com">Test The Web</a>
-          <a href="test.ooer.com">Decks</a>
-          <a href="test.ooer.com">Synth</a>
-          <a href="toys.ooer.com">Crispy</a>
-          <a href="toys.ooer.com">Toybox</a>
-        </div>
-      </div>
+      <nav>
+        <span>Welcome</span>
+        <a href="http://ooer.com">Blog</a>
+        <a href="https://github.com/onion2k">Github</a>
+        <a href="https://twitter.com/onion2k">Twitter</a>
+        <a href="https://linkedin.com/onion2k">LinkedIn</a>
+        <a href="http://test.ooer.com">Test The Web</a>
+        <a href="http://yt1210.ooer.com">Decks</a>
+        <a href="https://synth.ooer.com">Synth</a>
+        <a href="http://coe.ooer.com">Crispy</a>
+        <a href="http://www.ooer.com/toys">Toybox</a>
+      </nav>
     );
   }
 }
