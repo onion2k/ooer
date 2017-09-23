@@ -11,7 +11,7 @@ class App extends Component {
         <a href="https://twitter.com/onion2k">Twitter</a>
         <a href="https://linkedin.com/onion2k">LinkedIn</a>
         <a href="http://test.ooer.com">Test The Web</a>
-        <a href="http://yt1210.ooer.com">Decks</a>
+        <a href="http://yt1210.ooer.com">YT1210</a>
         <a href="https://synth.ooer.com">Synth</a>
         <a href="http://coe.ooer.com">Crispy</a>
         <a href="http://www.ooer.com/toys">Toybox</a>
