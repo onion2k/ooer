@@ -10,11 +10,7 @@ nav {
   width: 65vw;
   align-self: center;
   justify-self: center;
-  text-align: center;
   transform: rotate(-12.5deg);
-  padding: 30px;
-  border-left: 15px solid #000;
-  border-right: 15px solid #000;
 }
 
 h1, span, a {

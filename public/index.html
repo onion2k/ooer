@@ -25,7 +25,41 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
+    <canvas id="fx"></canvas>
     <main id="main"></main>
+    <script id="vs" type="x-shader/x-fragment">attribute vec4 position;
+      void main() {
+          gl_Position = position;
+      }
+    </script>
+    <script id="fs" type="x-shader/x-fragment">#ifdef GL_ES
+      precision mediump float;
+      #endif
+      
+      #extension GL_OES_standard_derivatives : enable
+      
+      uniform float time;
+      uniform vec2 mouse;
+      uniform vec2 resolution;
+
+      const vec3 cola = vec3(255./255. , 255./255., 255./255.);
+      const vec3 colb = vec3(235./255.,235./255.,235./255.);
+      
+      void main( void ) {
+      
+        vec2 pos = ( gl_FragCoord.xy / resolution.xy );
+      
+        pos.x += cos(pos.y*5.)*.2;
+        pos.y += cos(pos.y*5.0+time)*.2+sin(pos.x*10.0+time)*.2;
+      
+        float color = clamp(-100.0+mod(pos.x+pos.y, .2)*1000.0, 0., 1.0);
+        
+        gl_FragColor = vec4( mix(cola , colb , color), 1.0 );
+      
+      }
+    </script>
+    <script src="twgl.js"></script>
+    <script defer src="bg.js"></script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
