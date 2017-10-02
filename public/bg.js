@@ -46,11 +46,18 @@ function effect(vs, fs) {
 
 };
 
-var canvas = document.getElementById("fx");
-var width = canvas.width;
-var height = canvas.height;
 
-var bg = effect('vs','fs');
+document.addEventListener('DOMContentLoaded', ()=>{
 
-bg.init(width, height, canvas);
-bg.render();
+    var canvas = document.getElementById("fx");
+    var width = canvas.width;
+    var height = canvas.height;
+    
+    console.log(width, height);
+    
+    var bg = effect('vs','fs');
+    
+    bg.init(width, height, canvas);
+    bg.render();
+    
+});
