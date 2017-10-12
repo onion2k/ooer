@@ -1,61 +1,64 @@
-main {
+main > div {
   display: grid;
   height: 100vh;
-  grid-template-rows: 1fr;
+  grid-template-rows: 3fr 1fr;
   grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
   background-image: url('topography.png');
 }
 
-nav {
-  width: 65vw;
+h1 {
+  padding:0;
+  margin: 0;
   align-self: center;
   justify-self: center;
+  text-transform: uppercase;
+  line-height: 1.0rem;
+  font-size: 50vw;
+  color: rgba(0,0,0,0.5);
+  transform: rotate(0);
+  filter: invert(55%) blur(5px);
+}
+
+nav {
+  width: 70vw;
+  align-self: flex-end;
+  justify-self: center;
+  justify-content: space-evenly;
+  margin-bottom: 5vh;
   transform: rotate(0);
 }
 
-h1, span, a {
-  display: block;
+a {
+  display: inline-block;
   font-variant: small-caps;
-  line-height: 3.0rem;
-  font-size: 3.0rem;
-  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.0rem;
+  font-size: 1.0rem;
   margin: 0.4rem 0.5rem;
   text-decoration: none;
-  word-spacing: -1.0rem;
-  text-shadow: 1px 1px 2px #888;
   transition: 0.15s transform linear, 0.15s text-shadow linear;
+  color: #888;
 }
 
 @media (min-width: 600px) {
-  nav {
-    transform: rotate(-12.5deg);
+  h1 {
+    filter: invert(25%) blur(5px);
   }
-  h1, span, a {
-    display: inline-block;
-    line-height: 5.0rem;
-    font-size: 5.0rem;
-    font-weight: 600;
-    letter-spacing: -0.1rem;
+  nav { 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  a {
+    line-height: 1.2rem;
+    font-size: 1.2rem;
   }
 }
-
-span {
-  color: #aaa;
-}
-
-a:nth-of-type(1) { color: #f6511d; z-index: 10; }
-a:nth-of-type(2) { color: #ffe100; z-index: 9; }
-a:nth-of-type(3) { color: #00a6ed; z-index: 8; }
-a:nth-of-type(4) { color: #7fb800; z-index: 7; }
-a:nth-of-type(5) { color: #430c54; z-index: 6; }
-a:nth-of-type(6) { color: #f6511d; z-index: 5; }
-a:nth-of-type(7) { color: #ffe100; z-index: 4; }
-a:nth-of-type(8) { color: #00a6ed; z-index: 3; }
-a:nth-of-type(9) { color: #7fb800; z-index: 2; }
-a:nth-of-type(10) { color: #430c54; z-index: 1; }
 
 a:hover {
+  color: #f00;
   transform: scale(1.1);
-  text-shadow: 1px 1px 8px #888;
   z-index: 99;
 }
