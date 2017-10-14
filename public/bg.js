@@ -52,9 +52,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     var canvas = document.getElementById("fx");
     var width = canvas.width;
     var height = canvas.height;
-    
-    console.log(width, height);
-    
+        
     var bg = effect('vs','fs');
     
     bg.init(width, height, canvas);
