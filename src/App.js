@@ -19,6 +19,7 @@ class App extends Component {
           <a href="http://time.ooer.com">Time</a>
           <a href="http://advent.ooer.com">Advent</a>
           <a href="http://pixelheart.ooer.com">Pixelheart</a>
+          <a href="http://art.ooer.com">Art</a>
         </nav>
       </div>
     );
