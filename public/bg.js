@@ -46,7 +46,6 @@ function effect(vs, fs) {
 
 };
 
-
 document.addEventListener('DOMContentLoaded', ()=>{
 
     var canvas = document.getElementById("fx");
