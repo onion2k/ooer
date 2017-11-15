@@ -20,6 +20,7 @@ class App extends Component {
           <a href="http://advent.ooer.com">Advent</a>
           <a href="http://pixelheart.ooer.com">Pixelheart</a>
           <a href="http://art.ooer.com">Art</a>
+          <a href="http://disco.ooer.com">Disco</a>
         </nav>
       </div>
     );
