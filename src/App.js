@@ -15,12 +15,13 @@ class App extends Component {
           <a href="http://test.ooer.com">Test The Web</a>
           <a href="https://yt1210.ooer.com">YT1210</a>
           <a href="https://synth.ooer.com">Synth</a>
-          <a href="http://coe.ooer.com">Crispy</a>
+          <a href="https://coe.ooer.com">Crispy</a>
           <a href="http://time.ooer.com">Time</a>
-          <a href="http://advent.ooer.com">Advent</a>
-          <a href="http://pixelheart.ooer.com">Pixelheart</a>
-          <a href="http://art.ooer.com">Art</a>
-          <a href="http://disco.ooer.com">Disco</a>
+          <a href="https://advent.ooer.com">Advent</a>
+          <a href="https://pixelheart.ooer.com">Pixelheart</a>
+          <a href="https://art.ooer.com">Art</a>
+          <a href="https://disco.ooer.com">Disco</a>
+          <a href="https://light.ooer.com">Light</a>
         </nav>
       </div>
     );
