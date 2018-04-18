@@ -8,7 +8,10 @@ class App extends Component {
       <main>
         <div></div><div></div><div></div><div></div><div></div>
         <div></div>
-        <article href="https://blog.ooer.com"><header>Blog</header></article>
+        <article href="https://blog.ooer.com">
+          <header>Blog</header>
+          <p>Stuff about the blog</p>
+        </article>
         <article href="https://github.com/onion2k"><header>Github</header></article>
         <article href="https://twitter.com/onion2k"><header>Twitter</header></article>
         <div></div><div></div>
@@ -25,7 +28,7 @@ class App extends Component {
         <article href="https://art.ooer.com"><header>Art</header></article>
         <div></div><div></div>
         <article href="https://disco.ooer.com"><header>Disco</header></article>
-        <article href="https://light.ooer.com"><header>Ligh</header>t</article>
+        <article href="https://light.ooer.com"><header>Light</header></article>
         <article href="https://mccree.ooer.com"><header>McCree</header></article>
         <div></div><div></div>
         <article href="https://autograph.ooer.com"><header>Autograph</header></article>

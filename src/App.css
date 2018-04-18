@@ -24,7 +24,36 @@ div {
 }
 
 article {
-  background-color: pink;
+  background-color: rgb(255, 192, 203);
+  color: #000000;
+  transition: background-color 0.5s ease, color 0.1s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+article:hover {
+  background-color: rgb(168, 8, 8);
+  color: #ffffff;
+}
+
+header {
+  transform: rotate(-90deg) translateY(-3.8rem);
+  transform-origin: right top;
+  font-size: 4.0rem;
+  line-height: 4.0rem;
+}
+
+p {
+  opacity: 0;
+  margin: -4.0rem 0 0 0;
+  padding: 30px;
+  transition: all 0.25s ease;
+  transition-delay: 0.25s;
+  color: #ffffff;
+}
+
+article:hover p {
+  opacity: 1;
 }
 
 @media screen and (max-width: 600px) {
