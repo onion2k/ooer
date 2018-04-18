@@ -1,5 +1,6 @@
 body {
-	overflow-x: hidden;
+  overflow-x: hidden;
+  background-color: #000000;
 }
 
 main {
@@ -14,46 +15,47 @@ main {
 	display: grid;
 	grid-auto-rows: 30vw;
 	grid-template-columns: 15vw repeat(3, 30vw) 15vw;
-	grid-gap: 1px;
+	grid-gap: 5px;
 	transform: rotate(-2deg);
 	transform-origin: right top;
 }
 
-div {
-  background-color: #dddddd;
+main > div {
+  background-color: #FF4081;
 }
 
 article {
-  background-color: rgb(255, 192, 203);
+  display: grid;
   color: #000000;
-  transition: background-color 0.5s ease, color 0.1s ease;
+  transition: background-color 0.25s ease, color 0.5s ease;
   overflow: hidden;
   cursor: pointer;
 }
 
 article:hover {
-  background-color: rgb(168, 8, 8);
-  color: #ffffff;
+  color: #000000;
 }
 
-header {
-  transform: rotate(-90deg) translateY(-3.8rem);
+article > header {
+  font-family: 'Heebo';
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  vertical-align: baseline;
+  transform: rotate(-90deg) translateY(-2.75rem);
   transform-origin: right top;
-  font-size: 4.0rem;
-  line-height: 4.0rem;
+}
+
+article > div {
+  align-self: flex-end;
+  width: calc(100% - 3.5rem);
 }
 
 p {
-  opacity: 0;
   margin: -4.0rem 0 0 0;
   padding: 30px;
-  transition: all 0.25s ease;
-  transition-delay: 0.25s;
-  color: #ffffff;
-}
-
-article:hover p {
-  opacity: 1;
+  transition: all 0.2s ease;
+  color: #000000;
 }
 
 @media screen and (max-width: 600px) {
@@ -65,3 +67,17 @@ article:hover p {
     grid-template-columns: 15vw repeat(2, 50vw) 15vw;
   }
 }
+
+/* 
+.blog {
+  background-image: url('./assets/blog.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+article.color1 { background-color: rgba(36, 123, 160, 1); }
+article.color2 { background-color: rgba(112, 193, 179, 1); }
+article.color3 { background-color: rgba(178, 219, 191, 1); }
+article.color4 { background-color: rgba(243, 255, 189, 1); }
+article.color5 { background-color: rgba(255, 22, 84, 1); }
