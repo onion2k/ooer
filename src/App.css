@@ -26,11 +26,31 @@ main > div {
 
 a {
   display: grid;
+  background-color: #ffffff;
   color: #000000;
   transition: background-color 0.25s ease, color 0.5s ease;
   overflow: hidden;
   cursor: pointer;
   text-decoration: none;
+  background-blend-mode: overlay;
+  background-position: 0 0, 0 0;
+}
+
+a:hover{
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    background-position: 0 0, 0 0;
+  }
+
+  to {
+    background-position: 64px 64px, 0 0;
+  }
 }
 
 div.title, div.footer {
@@ -112,23 +132,23 @@ article.color19  { background: linear-gradient(-45deg, #f5943b, #FFC76E); }
 article.color20  { background: linear-gradient(-45deg, #c098fd, #F3CBFF); } */
 
 
-a.color1   { background: linear-gradient(0deg, #72e5ef, #FFFFFF); }
-a.color2   { background: linear-gradient(0deg, #da3661, #FFFFFF); }
-a.color3   { background: linear-gradient(0deg, #5faf66, #FFFFFF); }
-a.color4   { background: linear-gradient(0deg, #dc58ea, #FFFFFF); }
-a.color5   { background: linear-gradient(0deg, #a8f94f, #FFFFFF); }
-a.color6   { background: linear-gradient(0deg, #8453b6, #FFFFFF); }
-a.color7   { background: linear-gradient(0deg, #e0fab6, #FFFFFF); }
-a.color8   { background: linear-gradient(0deg, #7212ff, #FFFFFF); }
-a.color9   { background: linear-gradient(0deg, #d8dc35, #FFFFFF); }
-a.color10  { background: linear-gradient(0deg, #6791d7, #FFFFFF); }
-a.color11  { background: linear-gradient(0deg, #2cf52b, #FFFFFF); }
-a.color12  { background: linear-gradient(0deg, #e23209, #FFFFFF); }
-a.color13  { background: linear-gradient(0deg, #3dffc4, #FFFFFF); }
-a.color14  { background: linear-gradient(0deg, #a25542, #FFFFFF); }
-a.color15  { background: linear-gradient(0deg, #d0d2f0, #FFFFFF); }
-a.color16  { background: linear-gradient(0deg, #056e12, #FFFFFF); }
-a.color17  { background: linear-gradient(0deg, #e793ac, #FFFFFF); }
-a.color18  { background: linear-gradient(0deg, #25919d, #FFFFFF); }
-a.color19  { background: linear-gradient(0deg, #f5943b, #FFFFFF); }
-a.color20  { background: linear-gradient(0deg, #c098fd, #FFFFFF); }
+a.color1   { background: url('./assets/blog.svg'), linear-gradient(0deg, #72e5ef, #FFFFFF); }
+a.color2   { background: url('./assets/blog.svg'), linear-gradient(0deg, #da3661, #FFFFFF); }
+a.color3   { background: url('./assets/blog.svg'), linear-gradient(0deg, #5faf66, #FFFFFF); }
+a.color4   { background: url('./assets/blog.svg'), linear-gradient(0deg, #dc58ea, #FFFFFF); }
+a.color5   { background: url('./assets/blog.svg'), linear-gradient(0deg, #a8f94f, #FFFFFF); }
+a.color6   { background: url('./assets/blog.svg'), linear-gradient(0deg, #8453b6, #FFFFFF); }
+a.color7   { background: url('./assets/blog.svg'), linear-gradient(0deg, #e0fab6, #FFFFFF); }
+a.color8   { background: url('./assets/blog.svg'), linear-gradient(0deg, #7212ff, #FFFFFF); }
+a.color9   { background: url('./assets/blog.svg'), linear-gradient(0deg, #d8dc35, #FFFFFF); }
+a.color10  { background: url('./assets/blog.svg'), linear-gradient(0deg, #6791d7, #FFFFFF); }
+a.color11  { background: url('./assets/blog.svg'), linear-gradient(0deg, #2cf52b, #FFFFFF); }
+a.color12  { background: url('./assets/blog.svg'), linear-gradient(0deg, #e23209, #FFFFFF); }
+a.color13  { background: url('./assets/blog.svg'), linear-gradient(0deg, #3dffc4, #FFFFFF); }
+a.color14  { background: url('./assets/blog.svg'), linear-gradient(0deg, #a25542, #FFFFFF); }
+a.color15  { background: url('./assets/blog.svg'), linear-gradient(0deg, #d0d2f0, #FFFFFF); }
+a.color16  { background: url('./assets/blog.svg'), linear-gradient(0deg, #056e12, #FFFFFF); }
+a.color17  { background: url('./assets/blog.svg'), linear-gradient(0deg, #e793ac, #FFFFFF); }
+a.color18  { background: url('./assets/blog.svg'), linear-gradient(0deg, #25919d, #FFFFFF); }
+a.color19  { background: url('./assets/blog.svg'), linear-gradient(0deg, #f5943b, #FFFFFF); }
+a.color20  { background: url('./assets/blog.svg'), linear-gradient(0deg, #c098fd, #FFFFFF); }
