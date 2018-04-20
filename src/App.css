@@ -37,7 +37,7 @@ a {
 }
 
 a:hover{
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-name: slidein;
@@ -131,24 +131,44 @@ article.color18  { background: linear-gradient(-45deg, #25919d, #58C4D0); }
 article.color19  { background: linear-gradient(-45deg, #f5943b, #FFC76E); }
 article.color20  { background: linear-gradient(-45deg, #c098fd, #F3CBFF); } */
 
+a.color1   { background: linear-gradient(0deg, #72e5ef, #FFFFFF); }
+a.color2   { background: linear-gradient(0deg, #da3661, #FFFFFF); }
+a.color3   { background: linear-gradient(0deg, #5faf66, #FFFFFF); }
+a.color4   { background: linear-gradient(0deg, #dc58ea, #FFFFFF); }
+a.color5   { background: linear-gradient(0deg, #a8f94f, #FFFFFF); }
+a.color6   { background: linear-gradient(0deg, #8453b6, #FFFFFF); }
+a.color7   { background: linear-gradient(0deg, #e0fab6, #FFFFFF); }
+a.color8   { background: linear-gradient(0deg, #7212ff, #FFFFFF); }
+a.color9   { background: linear-gradient(0deg, #d8dc35, #FFFFFF); }
+a.color10  { background: linear-gradient(0deg, #6791d7, #FFFFFF); }
+a.color11  { background: linear-gradient(0deg, #2cf52b, #FFFFFF); }
+a.color12  { background: linear-gradient(0deg, #e23209, #FFFFFF); }
+a.color13  { background: linear-gradient(0deg, #3dffc4, #FFFFFF); }
+a.color14  { background: linear-gradient(0deg, #a25542, #FFFFFF); }
+a.color15  { background: linear-gradient(0deg, #d0d2f0, #FFFFFF); }
+a.color16  { background: linear-gradient(0deg, #056e12, #FFFFFF); }
+a.color17  { background: linear-gradient(0deg, #e793ac, #FFFFFF); }
+a.color18  { background: linear-gradient(0deg, #25919d, #FFFFFF); }
+a.color19  { background: linear-gradient(0deg, #f5943b, #FFFFFF); }
+a.color20  { background: linear-gradient(0deg, #c098fd, #FFFFFF); }
 
-a.color1   { background: url('./assets/blog.svg'), linear-gradient(0deg, #72e5ef, #FFFFFF); }
-a.color2   { background: url('./assets/blog.svg'), linear-gradient(0deg, #da3661, #FFFFFF); }
-a.color3   { background: url('./assets/blog.svg'), linear-gradient(0deg, #5faf66, #FFFFFF); }
-a.color4   { background: url('./assets/blog.svg'), linear-gradient(0deg, #dc58ea, #FFFFFF); }
-a.color5   { background: url('./assets/blog.svg'), linear-gradient(0deg, #a8f94f, #FFFFFF); }
-a.color6   { background: url('./assets/blog.svg'), linear-gradient(0deg, #8453b6, #FFFFFF); }
-a.color7   { background: url('./assets/blog.svg'), linear-gradient(0deg, #e0fab6, #FFFFFF); }
-a.color8   { background: url('./assets/blog.svg'), linear-gradient(0deg, #7212ff, #FFFFFF); }
-a.color9   { background: url('./assets/blog.svg'), linear-gradient(0deg, #d8dc35, #FFFFFF); }
-a.color10  { background: url('./assets/blog.svg'), linear-gradient(0deg, #6791d7, #FFFFFF); }
-a.color11  { background: url('./assets/blog.svg'), linear-gradient(0deg, #2cf52b, #FFFFFF); }
-a.color12  { background: url('./assets/blog.svg'), linear-gradient(0deg, #e23209, #FFFFFF); }
-a.color13  { background: url('./assets/blog.svg'), linear-gradient(0deg, #3dffc4, #FFFFFF); }
-a.color14  { background: url('./assets/blog.svg'), linear-gradient(0deg, #a25542, #FFFFFF); }
-a.color15  { background: url('./assets/blog.svg'), linear-gradient(0deg, #d0d2f0, #FFFFFF); }
-a.color16  { background: url('./assets/blog.svg'), linear-gradient(0deg, #056e12, #FFFFFF); }
-a.color17  { background: url('./assets/blog.svg'), linear-gradient(0deg, #e793ac, #FFFFFF); }
-a.color18  { background: url('./assets/blog.svg'), linear-gradient(0deg, #25919d, #FFFFFF); }
-a.color19  { background: url('./assets/blog.svg'), linear-gradient(0deg, #f5943b, #FFFFFF); }
-a.color20  { background: url('./assets/blog.svg'), linear-gradient(0deg, #c098fd, #FFFFFF); }
+a.color1:hover   { background: url('./assets/github.svg'), linear-gradient(0deg, #72e5ef, #FFFFFF); }
+a.color2:hover   { background: url('./assets/blog.svg'), linear-gradient(0deg, #da3661, #FFFFFF); }
+a.color3:hover   { background: url('./assets/twitter.svg'), linear-gradient(0deg, #5faf66, #FFFFFF); }
+a.color4:hover   { background: url('./assets/linkedin.svg'), linear-gradient(0deg, #dc58ea, #FFFFFF); }
+a.color5:hover   { background: url('./assets/decks.svg'), linear-gradient(0deg, #a8f94f, #FFFFFF); }
+a.color6:hover   { background: url('./assets/light.svg'), linear-gradient(0deg, #8453b6, #FFFFFF); }
+a.color7:hover   { background: url('./assets/synth.svg'), linear-gradient(0deg, #e0fab6, #FFFFFF); }
+a.color8:hover   { background: url('./assets/crispy.svg'), linear-gradient(0deg, #7212ff, #FFFFFF); }
+a.color9:hover   { background: url('./assets/time.svg'), linear-gradient(0deg, #d8dc35, #FFFFFF); }
+a.color10:hover  { background: url('./assets/advent.svg'), linear-gradient(0deg, #6791d7, #FFFFFF); }
+a.color11:hover  { background: url('./assets/heart.svg'), linear-gradient(0deg, #2cf52b, #FFFFFF); }
+a.color12:hover  { background: url('./assets/art.svg'), linear-gradient(0deg, #e23209, #FFFFFF); }
+a.color13:hover  { background: url('./assets/disco.svg'), linear-gradient(0deg, #3dffc4, #FFFFFF); }
+a.color14:hover  { background: url('./assets/gun.svg'), linear-gradient(0deg, #a25542, #FFFFFF); }
+a.color15:hover  { background: url('./assets/test.svg'), linear-gradient(0deg, #d0d2f0, #FFFFFF); }
+a.color16:hover  { background: url('./assets/autograph.svg'), linear-gradient(0deg, #056e12, #FFFFFF); }
+a.color17:hover  { background: url('./assets/imgsvg.svg'), linear-gradient(0deg, #e793ac, #FFFFFF); }
+a.color18:hover  { background: url('./assets/blog.svg'), linear-gradient(0deg, #25919d, #FFFFFF); }
+a.color19:hover  { background: url('./assets/blog.svg'), linear-gradient(0deg, #f5943b, #FFFFFF); }
+a.color20:hover  { background: url('./assets/blog.svg'), linear-gradient(0deg, #c098fd, #FFFFFF); }
