@@ -118,7 +118,13 @@ class App extends Component {
             <p>Turn images in to SVG graphics using tessellating shapes.</p>
           </div>
         </a>
-        <div></div><div></div>
+        <a href="https://mandala.ooer.com" className="color18">
+          <header>Mandala</header>
+          <div>
+            <p>A canvas manadala generator.</p>
+          </div>
+        </a>
+        <div></div>
 
         <div></div>
           <div className="footer"><h2>Thanks for visiting</h2></div>
