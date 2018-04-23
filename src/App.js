@@ -9,8 +9,8 @@ class App extends Component {
         <div></div><div></div><div></div><div></div><div></div>
         <div></div>
           <div className="title"><h1>Ooer</h1></div>
-        <div></div>
-        <div></div>
+        <div className="spacer"></div>
+        <div className="spacer"></div>
         <a href="https://github.com/onion2k" className="color1">
           <header>Github</header>
           <div>
@@ -29,7 +29,7 @@ class App extends Component {
             <p>I've been on Twitter for ages, but I don't tweet as much as I used to. I retweet a lot of tech, code, diversity and silly jokes.</p>
           </div>
         </a>
-        <div></div><div></div>
+        <div className="spacer"></div><div className="spacer"></div>
         <a href="https://www.linkedin.com/in/cdneale" className="color4">
           <header>LinkedIn</header>
           <div>
@@ -48,7 +48,7 @@ class App extends Component {
             <p>A GLSL shader coupled to code that maps where divs are on the page, to give a nice "back light" effect.</p>
           </div>
         </a>
-        <div></div><div></div>
+        <div className="spacer"></div><div className="spacer"></div>
         <a href="https://synth.ooer.com" className="color7">
           <header>Synth</header>
           <div>
@@ -67,7 +67,7 @@ class App extends Component {
             <p>A timeline of the Internet built using the same base HTML and updated by replacing the CSS.</p>
           </div>
         </a>
-        <div></div><div></div>
+        <div className="spacer"></div><div className="spacer"></div>
         <a href="https://advent.ooer.com" className="color10">
           <header>Advent</header>
           <div>
@@ -86,7 +86,7 @@ class App extends Component {
             <p>Arty experiments</p>
           </div>
         </a>
-        <div></div><div></div>
+        <div className="spacer"></div><div className="spacer"></div>
         <a href="https://disco.ooer.com" className="color13">
           <header>Disco</header>
           <div>
@@ -105,7 +105,7 @@ class App extends Component {
             <p>A website about testing that isn't even close to finished.</p>
           </div>
         </a>
-        <div></div><div></div>
+        <div className="spacer"></div><div className="spacer"></div>
         <a href="https://autograph.ooer.com" className="color16">
           <header>Autograph</header>
           <div>
@@ -124,7 +124,7 @@ class App extends Component {
             <p>A canvas manadala generator.</p>
           </div>
         </a>
-        <div></div>
+        <div className="spacer"></div>
 
         <div></div>
           <div className="footer"><h2>Thanks for visiting</h2></div>

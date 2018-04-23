@@ -1,23 +1,16 @@
-body {
-  overflow-x: hidden;
-  background-color: #000000;
-}
 
 main {
-	position: absolute;
-	top: -15vw;
-	left: 0;
-	bottom: 0;
-	overflow-x: hidden;
-	overflow-y: scroll;
-	max-height: calc(100vh + 30vw);
-	margin: 0 -7.5vw -50vw -7.5vw;
-	display: grid;
-	grid-auto-rows: 30vw;
-	grid-template-columns: 15vw repeat(3, 30vw) 15vw;
-	grid-gap: 4px;
-	transform: rotate(-2deg);
-	transform-origin: right top;
+  display: grid;
+  position: absolute;
+  top: -15vw;
+  left: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  min-height: calc(100vh + 30vw);
+  margin: 0;
+  grid-auto-rows: 50vw;
+  grid-template-columns: 100vw;
 }
 
 main > div {
@@ -40,17 +33,6 @@ a:hover{
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    background-position: 0 0, 0 0;
-  }
-
-  to {
-    background-position: 64px 64px, 0 0;
-  }
 }
 
 div.title, div.footer {
@@ -100,13 +82,18 @@ p {
   color: #000000;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
+  div.spacer {
+    display: block;
+  }
   main {
-    top: -25vw;
-    max-height: calc(100vh + 50vw);
+    max-height: calc(100vh + 30vw);
     margin: 0 -7.5vw -50vw -7.5vw;
-    grid-auto-rows: 50vw;
-    grid-template-columns: 15vw repeat(2, 50vw) 15vw;
+    grid-auto-rows: 30vw;
+    grid-template-columns: 15vw repeat(3, 30vw) 15vw;
+    grid-gap: 4px;
+    transform: rotate(-2deg);
+    transform-origin: right top;
   }
 }
 
@@ -152,23 +139,40 @@ a.color18  { background: linear-gradient(0deg, #25919d, #FFFFFF); }
 a.color19  { background: linear-gradient(0deg, #f5943b, #FFFFFF); }
 a.color20  { background: linear-gradient(0deg, #c098fd, #FFFFFF); }
 
-a.color1:hover   { background: url('./assets/github.svg'), linear-gradient(0deg, #72e5ef, #FFFFFF); }
-a.color2:hover   { background: url('./assets/blog.svg'), linear-gradient(0deg, #da3661, #FFFFFF); }
-a.color3:hover   { background: url('./assets/twitter.svg'), linear-gradient(0deg, #5faf66, #FFFFFF); }
-a.color4:hover   { background: url('./assets/linkedin.svg'), linear-gradient(0deg, #dc58ea, #FFFFFF); }
-a.color5:hover   { background: url('./assets/decks.svg'), linear-gradient(0deg, #a8f94f, #FFFFFF); }
-a.color6:hover   { background: url('./assets/light.svg'), linear-gradient(0deg, #8453b6, #FFFFFF); }
-a.color7:hover   { background: url('./assets/synth.svg'), linear-gradient(0deg, #e0fab6, #FFFFFF); }
-a.color8:hover   { background: url('./assets/crispy.svg'), linear-gradient(0deg, #7212ff, #FFFFFF); }
-a.color9:hover   { background: url('./assets/time.svg'), linear-gradient(0deg, #d8dc35, #FFFFFF); }
-a.color10:hover  { background: url('./assets/advent.svg'), linear-gradient(0deg, #6791d7, #FFFFFF); }
-a.color11:hover  { background: url('./assets/heart.svg'), linear-gradient(0deg, #2cf52b, #FFFFFF); }
-a.color12:hover  { background: url('./assets/art.svg'), linear-gradient(0deg, #e23209, #FFFFFF); }
-a.color13:hover  { background: url('./assets/disco.svg'), linear-gradient(0deg, #3dffc4, #FFFFFF); }
-a.color14:hover  { background: url('./assets/gun.svg'), linear-gradient(0deg, #a25542, #FFFFFF); }
-a.color15:hover  { background: url('./assets/test.svg'), linear-gradient(0deg, #d0d2f0, #FFFFFF); }
-a.color16:hover  { background: url('./assets/autograph.svg'), linear-gradient(0deg, #056e12, #FFFFFF); }
-a.color17:hover  { background: url('./assets/imgsvg.svg'), linear-gradient(0deg, #e793ac, #FFFFFF); }
-a.color18:hover  { background: url('./assets/blog.svg'), linear-gradient(0deg, #25919d, #FFFFFF); }
-a.color19:hover  { background: url('./assets/blog.svg'), linear-gradient(0deg, #f5943b, #FFFFFF); }
-a.color20:hover  { background: url('./assets/blog.svg'), linear-gradient(0deg, #c098fd, #FFFFFF); }
+a.color1:hover   { background: url('./assets/github.svg'), linear-gradient(0deg, #72e5ef, #FFFFFF); animation-name: br; }
+a.color2:hover   { background: url('./assets/blog.svg'), linear-gradient(0deg, #da3661, #FFFFFF); animation-name: bl;  }
+a.color3:hover   { background: url('./assets/twitter.svg'), linear-gradient(0deg, #5faf66, #FFFFFF); animation-name: tr;  }
+a.color4:hover   { background: url('./assets/linkedin.svg'), linear-gradient(0deg, #dc58ea, #FFFFFF); animation-name: tl;  }
+a.color5:hover   { background: url('./assets/decks.svg'), linear-gradient(0deg, #a8f94f, #FFFFFF); animation-name: br; }
+a.color6:hover   { background: url('./assets/light.svg'), linear-gradient(0deg, #8453b6, #FFFFFF); animation-name: bl; }
+a.color7:hover   { background: url('./assets/synth.svg'), linear-gradient(0deg, #e0fab6, #FFFFFF); animation-name: tr; }
+a.color8:hover   { background: url('./assets/crispy.svg'), linear-gradient(0deg, #7212ff, #FFFFFF); animation-name: tl; }
+a.color9:hover   { background: url('./assets/time.svg'), linear-gradient(0deg, #d8dc35, #FFFFFF); animation-name: br; }
+a.color10:hover  { background: url('./assets/advent.svg'), linear-gradient(0deg, #6791d7, #FFFFFF); animation-name: bl; }
+a.color11:hover  { background: url('./assets/heart.svg'), linear-gradient(0deg, #2cf52b, #FFFFFF); animation-name: tr; }
+a.color12:hover  { background: url('./assets/art.svg'), linear-gradient(0deg, #e23209, #FFFFFF); animation-name: tl; }
+a.color13:hover  { background: url('./assets/disco.svg'), linear-gradient(0deg, #3dffc4, #FFFFFF); animation-name: br; }
+a.color14:hover  { background: url('./assets/gun.svg'), linear-gradient(0deg, #a25542, #FFFFFF); animation-name: bl; }
+a.color15:hover  { background: url('./assets/test.svg'), linear-gradient(0deg, #d0d2f0, #FFFFFF); animation-name: tr; }
+a.color16:hover  { background: url('./assets/autograph.svg'), linear-gradient(0deg, #056e12, #FFFFFF); animation-name: tl; }
+a.color17:hover  { background: url('./assets/imgsvg.svg'), linear-gradient(0deg, #e793ac, #FFFFFF); animation-name: br; }
+a.color18:hover  { background: url('./assets/mandala.svg'), linear-gradient(0deg, #25919d, #FFFFFF); animation-name: bl; }
+a.color19:hover  { background: url('./assets/blog.svg'), linear-gradient(0deg, #f5943b, #FFFFFF); animation-name: tr; }
+a.color20:hover  { background: url('./assets/blog.svg'), linear-gradient(0deg, #c098fd, #FFFFFF); animation-name: tl; }
+
+@keyframes bl {
+  from { background-position: 0 0, 0 0; }
+  to {background-position: -64px 64px, 0 0;}
+}
+@keyframes br {
+  from { background-position: 0 0, 0 0; }
+  to {background-position: 64px 64px, 0 0;}
+}
+@keyframes tr {
+  from { background-position: 0 0, 0 0; }
+  to {background-position: 64px -64px, 0 0;}
+}
+@keyframes tl {
+  from { background-position: 0 0, 0 0; }
+  to {background-position: -64px -64px, 0 0;}
+}
