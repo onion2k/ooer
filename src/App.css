@@ -88,20 +88,12 @@ a > header {
 
 a > div {
   align-self: flex-end;
-  transform: translateX(-30vw);
+  transform: translateY(-3vw);
+  opacity: 0;
   animation-name: slideleft;
   animation-iteration-count: 1;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-}
-
-@keyframes slideleft {
-  from {
-    transform: translateX(-30vw);
-  }
-  to {
-    transform: translateX(0px);
-  }
 }
 
 p {
@@ -191,6 +183,7 @@ a.color20:hover  { background: url('./assets/blog.svg'), linear-gradient(0deg, #
 
 :root {
   --base: 200ms;
+  --boxin: 100ms;
   --delay: 250ms;
 }
 
@@ -231,26 +224,26 @@ a {
   animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.01);
 }
 
-a.color1 { animation-delay: calc(var(--delay) * 0); }
-a.color2 { animation-delay: calc(var(--delay) * 1); }
-a.color3 { animation-delay: calc(var(--delay) * 2); }
-a.color4 { animation-delay: calc(var(--delay) * 3); }
-a.color5 { animation-delay: calc(var(--delay) * 4); }
-a.color6 { animation-delay: calc(var(--delay) * 5); }
-a.color7 { animation-delay: calc(var(--delay) * 6); }
-a.color8 { animation-delay: calc(var(--delay) * 7); }
-a.color9 { animation-delay: calc(var(--delay) * 8); }
-a.color10 { animation-delay: calc(var(--delay) * 9); }
-a.color11 { animation-delay: calc(var(--delay) * 10); }
-a.color12 { animation-delay: calc(var(--delay) * 11); }
-a.color13 { animation-delay: calc(var(--delay) * 12); }
-a.color14 { animation-delay: calc(var(--delay) * 13); }
-a.color15 { animation-delay: calc(var(--delay) * 14); }
-a.color16 { animation-delay: calc(var(--delay) * 15); }
-a.color17 { animation-delay: calc(var(--delay) * 16); }
-a.color18 { animation-delay: calc(var(--delay) * 17); }
-a.color19 { animation-delay: calc(var(--delay) * 18); }
-a.color20 { animation-delay: calc(var(--delay) * 19); }
+a.color1 { animation-delay: calc(var(--boxin) * 0); }
+a.color2 { animation-delay: calc(var(--boxin) * 1); }
+a.color3 { animation-delay: calc(var(--boxin) * 2); }
+a.color4 { animation-delay: calc(var(--boxin) * 5); }
+a.color5 { animation-delay: calc(var(--boxin) * 4); }
+a.color6 { animation-delay: calc(var(--boxin) * 3); }
+a.color7 { animation-delay: calc(var(--boxin) * 6); }
+a.color8 { animation-delay: calc(var(--boxin) * 7); }
+a.color9 { animation-delay: calc(var(--boxin) * 8); }
+a.color10 { animation-delay: calc(var(--boxin) * 11); }
+a.color11 { animation-delay: calc(var(--boxin) * 10); }
+a.color12 { animation-delay: calc(var(--boxin) * 9); }
+a.color13 { animation-delay: calc(var(--boxin) * 12); }
+a.color14 { animation-delay: calc(var(--boxin) * 13); }
+a.color15 { animation-delay: calc(var(--boxin) * 14); }
+a.color16 { animation-delay: calc(var(--boxin) * 17); }
+a.color17 { animation-delay: calc(var(--boxin) * 16); }
+a.color18 { animation-delay: calc(var(--boxin) * 15); }
+a.color19 { animation-delay: calc(var(--boxin) * 18); }
+a.color20 { animation-delay: calc(var(--boxin) * 19); }
 
 @keyframes slidebox {
   from {
@@ -261,47 +254,47 @@ a.color20 { animation-delay: calc(var(--delay) * 19); }
   }
 }
 
-a.color1 > header { animation-delay: calc(var(--delay) * 0 + var(--base) * 6); }
-a.color2 > header { animation-delay: calc(var(--delay) * 1 + var(--base) * 6); }
-a.color3 > header { animation-delay: calc(var(--delay) * 2 + var(--base) * 6); }
-a.color4 > header { animation-delay: calc(var(--delay) * 3 + var(--base) * 6); }
-a.color5 > header { animation-delay: calc(var(--delay) * 4 + var(--base) * 6); }
-a.color6 > header { animation-delay: calc(var(--delay) * 5 + var(--base) * 6); }
-a.color7 > header { animation-delay: calc(var(--delay) * 6 + var(--base) * 6); }
-a.color8 > header { animation-delay: calc(var(--delay) * 7 + var(--base) * 6); }
-a.color9 > header { animation-delay: calc(var(--delay) * 8 + var(--base) * 6); }
-a.color10 > header { animation-delay: calc(var(--delay) * 9 + var(--base) * 6); }
-a.color11 > header { animation-delay: calc(var(--delay) * 10 + var(--base) * 6); }
-a.color12 > header { animation-delay: calc(var(--delay) * 11 + var(--base) * 6); }
-a.color13 > header { animation-delay: calc(var(--delay) * 12 + var(--base) * 6); }
-a.color14 > header { animation-delay: calc(var(--delay) * 13 + var(--base) * 6); }
-a.color15 > header { animation-delay: calc(var(--delay) * 14 + var(--base) * 6); }
-a.color16 > header { animation-delay: calc(var(--delay) * 15 + var(--base) * 6); }
-a.color17 > header { animation-delay: calc(var(--delay) * 16 + var(--base) * 6); }
-a.color18 > header { animation-delay: calc(var(--delay) * 17 + var(--base) * 6); }
-a.color19 > header { animation-delay: calc(var(--delay) * 18 + var(--base) * 6); }
-a.color20 > header { animation-delay: calc(var(--delay) * 19 + var(--base) * 6); }
+a.color1 > header { animation-delay: calc(var(--delay) * 0 + var(--base) * 2); }
+a.color2 > header { animation-delay: calc(var(--delay) * 1 + var(--base) * 2); }
+a.color3 > header { animation-delay: calc(var(--delay) * 2 + var(--base) * 2); }
+a.color4 > header { animation-delay: calc(var(--delay) * 3 + var(--base) * 2); }
+a.color5 > header { animation-delay: calc(var(--delay) * 4 + var(--base) * 2); }
+a.color6 > header { animation-delay: calc(var(--delay) * 5 + var(--base) * 2); }
+a.color7 > header { animation-delay: calc(var(--delay) * 6 + var(--base) * 2); }
+a.color8 > header { animation-delay: calc(var(--delay) * 7 + var(--base) * 2); }
+a.color9 > header { animation-delay: calc(var(--delay) * 8 + var(--base) * 2); }
+a.color10 > header { animation-delay: calc(var(--delay) * 9 + var(--base) * 2); }
+a.color11 > header { animation-delay: calc(var(--delay) * 10 + var(--base) * 2); }
+a.color12 > header { animation-delay: calc(var(--delay) * 11 + var(--base) * 2); }
+a.color13 > header { animation-delay: calc(var(--delay) * 12 + var(--base) * 2); }
+a.color14 > header { animation-delay: calc(var(--delay) * 13 + var(--base) * 2); }
+a.color15 > header { animation-delay: calc(var(--delay) * 14 + var(--base) * 2); }
+a.color16 > header { animation-delay: calc(var(--delay) * 15 + var(--base) * 2); }
+a.color17 > header { animation-delay: calc(var(--delay) * 16 + var(--base) * 2); }
+a.color18 > header { animation-delay: calc(var(--delay) * 17 + var(--base) * 2); }
+a.color19 > header { animation-delay: calc(var(--delay) * 18 + var(--base) * 2); }
+a.color20 > header { animation-delay: calc(var(--delay) * 19 + var(--base) * 2); }
 
-a.color1 > div { animation-delay: calc(var(--delay) * 0 + var(--base) * 10); }
-a.color2 > div { animation-delay: calc(var(--delay) * 1 + var(--base) * 10); }
-a.color3 > div { animation-delay: calc(var(--delay) * 2 + var(--base) * 10); }
-a.color4 > div { animation-delay: calc(var(--delay) * 3 + var(--base) * 10); }
-a.color5 > div { animation-delay: calc(var(--delay) * 4 + var(--base) * 10); }
-a.color6 > div { animation-delay: calc(var(--delay) * 5 + var(--base) * 10); }
-a.color7 > div { animation-delay: calc(var(--delay) * 6 + var(--base) * 10); }
-a.color8 > div { animation-delay: calc(var(--delay) * 7 + var(--base) * 10); }
-a.color9 > div { animation-delay: calc(var(--delay) * 8 + var(--base) * 10); }
-a.color10 > div { animation-delay: calc(var(--delay) * 9 + var(--base) * 10); }
-a.color11 > div { animation-delay: calc(var(--delay) * 10 + var(--base) * 10); }
-a.color12 > div { animation-delay: calc(var(--delay) * 11 + var(--base) * 10); }
-a.color13 > div { animation-delay: calc(var(--delay) * 12 + var(--base) * 10); }
-a.color14 > div { animation-delay: calc(var(--delay) * 13 + var(--base) * 10); }
-a.color15 > div { animation-delay: calc(var(--delay) * 14 + var(--base) * 10); }
-a.color16 > div { animation-delay: calc(var(--delay) * 15 + var(--base) * 10); }
-a.color17 > div { animation-delay: calc(var(--delay) * 16 + var(--base) * 10); }
-a.color18 > div { animation-delay: calc(var(--delay) * 17 + var(--base) * 10); }
-a.color19 > div { animation-delay: calc(var(--delay) * 18 + var(--base) * 10); }
-a.color20 > div { animation-delay: calc(var(--delay) * 19 + var(--base) * 10); }
+a.color1 > div { animation-delay: calc(var(--delay) * 0 + var(--base) * 6); }
+a.color2 > div { animation-delay: calc(var(--delay) * 1 + var(--base) * 6); }
+a.color3 > div { animation-delay: calc(var(--delay) * 2 + var(--base) * 6); }
+a.color4 > div { animation-delay: calc(var(--delay) * 3 + var(--base) * 6); }
+a.color5 > div { animation-delay: calc(var(--delay) * 4 + var(--base) * 6); }
+a.color6 > div { animation-delay: calc(var(--delay) * 5 + var(--base) * 6); }
+a.color7 > div { animation-delay: calc(var(--delay) * 6 + var(--base) * 6); }
+a.color8 > div { animation-delay: calc(var(--delay) * 7 + var(--base) * 6); }
+a.color9 > div { animation-delay: calc(var(--delay) * 8 + var(--base) * 6); }
+a.color10 > div { animation-delay: calc(var(--delay) * 9 + var(--base) * 6); }
+a.color11 > div { animation-delay: calc(var(--delay) * 10 + var(--base) * 6); }
+a.color12 > div { animation-delay: calc(var(--delay) * 11 + var(--base) * 6); }
+a.color13 > div { animation-delay: calc(var(--delay) * 12 + var(--base) * 6); }
+a.color14 > div { animation-delay: calc(var(--delay) * 13 + var(--base) * 6); }
+a.color15 > div { animation-delay: calc(var(--delay) * 14 + var(--base) * 6); }
+a.color16 > div { animation-delay: calc(var(--delay) * 15 + var(--base) * 6); }
+a.color17 > div { animation-delay: calc(var(--delay) * 16 + var(--base) * 6); }
+a.color18 > div { animation-delay: calc(var(--delay) * 17 + var(--base) * 6); }
+a.color19 > div { animation-delay: calc(var(--delay) * 18 + var(--base) * 6); }
+a.color20 > div { animation-delay: calc(var(--delay) * 19 + var(--base) * 6); }
 
 main > div.entrance {
   opacity: 0;
@@ -315,7 +308,19 @@ main > div.entrance {
   from {
     opacity: 0;
   }
-    to {
-      opacity: 1;
-    }
+  to {
+    opacity: 1;
   }
+}
+
+
+@keyframes slideleft {
+  from {
+    transform: translateY(-3vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
