@@ -15,6 +15,7 @@ main {
 
 main > div {
   background-color: #FF4081;
+  border-radius: 2px;
 }
 
 a {
@@ -27,12 +28,11 @@ a {
   text-decoration: none;
   background-blend-mode: overlay;
   background-position: 0 0, 0 0;
-}
-
-a:hover{
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  transform: translateY(200vh);
+  animation-name: slidebox;
+  animation-duration: calc(var(--delay) * 4);
+  animation-fill-mode: forwards;
+  border-radius: 2px;
 }
 
 div.title, div.footer {
@@ -47,6 +47,8 @@ div.title, div.footer {
   align-items: flex-end;
   justify-items: flex-end;
   overflow: hidden;
+  transform: translateX(-100vw);
+  border-radius: 2px;
 }
 
 h1 {
@@ -67,12 +69,39 @@ a > header {
   font-size: 5.0rem;
   line-height: 5.0rem;
   vertical-align: baseline;
-  transform: rotate(-90deg) translateY(-3.75rem);
+  transform: rotate(-90deg) translateY(-3.75rem) translateX(-30vw);
   transform-origin: right top;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+  from {
+    transform: rotate(-90deg) translateY(-3.75rem) translateX(-30vw);
+  }
+  to {
+    transform: rotate(-90deg) translateY(-3.75rem) translateX(0px);
+  }
 }
 
 a > div {
   align-self: flex-end;
+  transform: translateX(-30vw);
+  animation-name: slideleft;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideleft {
+  from {
+    transform: translateX(-30vw);
+  }
+  to {
+    transform: translateX(0px);
+  }
 }
 
 p {
@@ -139,40 +168,154 @@ a.color18  { background: linear-gradient(0deg, #25919d, #FFFFFF); }
 a.color19  { background: linear-gradient(0deg, #f5943b, #FFFFFF); }
 a.color20  { background: linear-gradient(0deg, #c098fd, #FFFFFF); }
 
-a.color1:hover   { background: url('./assets/github.svg'), linear-gradient(0deg, #72e5ef, #FFFFFF); animation-name: br; }
-a.color2:hover   { background: url('./assets/blog.svg'), linear-gradient(0deg, #da3661, #FFFFFF); animation-name: bl;  }
-a.color3:hover   { background: url('./assets/twitter.svg'), linear-gradient(0deg, #5faf66, #FFFFFF); animation-name: tr;  }
-a.color4:hover   { background: url('./assets/linkedin.svg'), linear-gradient(0deg, #dc58ea, #FFFFFF); animation-name: tl;  }
-a.color5:hover   { background: url('./assets/decks.svg'), linear-gradient(0deg, #a8f94f, #FFFFFF); animation-name: br; }
-a.color6:hover   { background: url('./assets/light.svg'), linear-gradient(0deg, #8453b6, #FFFFFF); animation-name: bl; }
-a.color7:hover   { background: url('./assets/synth.svg'), linear-gradient(0deg, #e0fab6, #FFFFFF); animation-name: tr; }
-a.color8:hover   { background: url('./assets/crispy.svg'), linear-gradient(0deg, #7212ff, #FFFFFF); animation-name: tl; }
-a.color9:hover   { background: url('./assets/time.svg'), linear-gradient(0deg, #d8dc35, #FFFFFF); animation-name: br; }
-a.color10:hover  { background: url('./assets/advent.svg'), linear-gradient(0deg, #6791d7, #FFFFFF); animation-name: bl; }
-a.color11:hover  { background: url('./assets/heart.svg'), linear-gradient(0deg, #2cf52b, #FFFFFF); animation-name: tr; }
-a.color12:hover  { background: url('./assets/art.svg'), linear-gradient(0deg, #e23209, #FFFFFF); animation-name: tl; }
-a.color13:hover  { background: url('./assets/disco.svg'), linear-gradient(0deg, #3dffc4, #FFFFFF); animation-name: br; }
-a.color14:hover  { background: url('./assets/gun.svg'), linear-gradient(0deg, #a25542, #FFFFFF); animation-name: bl; }
-a.color15:hover  { background: url('./assets/test.svg'), linear-gradient(0deg, #d0d2f0, #FFFFFF); animation-name: tr; }
-a.color16:hover  { background: url('./assets/autograph.svg'), linear-gradient(0deg, #056e12, #FFFFFF); animation-name: tl; }
-a.color17:hover  { background: url('./assets/imgsvg.svg'), linear-gradient(0deg, #e793ac, #FFFFFF); animation-name: br; }
-a.color18:hover  { background: url('./assets/mandala.svg'), linear-gradient(0deg, #25919d, #FFFFFF); animation-name: bl; }
-a.color19:hover  { background: url('./assets/blog.svg'), linear-gradient(0deg, #f5943b, #FFFFFF); animation-name: tr; }
-a.color20:hover  { background: url('./assets/blog.svg'), linear-gradient(0deg, #c098fd, #FFFFFF); animation-name: tl; }
+a.color1:hover   { background: url('./assets/github.svg'), linear-gradient(0deg, #72e5ef, #FFFFFF); }
+a.color2:hover   { background: url('./assets/blog.svg'), linear-gradient(0deg, #da3661, #FFFFFF);  }
+a.color3:hover   { background: url('./assets/twitter.svg'), linear-gradient(0deg, #5faf66, #FFFFFF);  }
+a.color4:hover   { background: url('./assets/linkedin.svg'), linear-gradient(0deg, #dc58ea, #FFFFFF);  }
+a.color5:hover   { background: url('./assets/decks.svg'), linear-gradient(0deg, #a8f94f, #FFFFFF); }
+a.color6:hover   { background: url('./assets/light.svg'), linear-gradient(0deg, #8453b6, #FFFFFF); }
+a.color7:hover   { background: url('./assets/synth.svg'), linear-gradient(0deg, #e0fab6, #FFFFFF);}
+a.color8:hover   { background: url('./assets/crispy.svg'), linear-gradient(0deg, #7212ff, #FFFFFF); }
+a.color9:hover   { background: url('./assets/time.svg'), linear-gradient(0deg, #d8dc35, #FFFFFF);  }
+a.color10:hover  { background: url('./assets/advent.svg'), linear-gradient(0deg, #6791d7, #FFFFFF);  }
+a.color11:hover  { background: url('./assets/heart.svg'), linear-gradient(0deg, #2cf52b, #FFFFFF);  }
+a.color12:hover  { background: url('./assets/art.svg'), linear-gradient(0deg, #e23209, #FFFFFF);  }
+a.color13:hover  { background: url('./assets/disco.svg'), linear-gradient(0deg, #3dffc4, #FFFFFF);  }
+a.color14:hover  { background: url('./assets/gun.svg'), linear-gradient(0deg, #a25542, #FFFFFF); }
+a.color15:hover  { background: url('./assets/test.svg'), linear-gradient(0deg, #d0d2f0, #FFFFFF); }
+a.color16:hover  { background: url('./assets/autograph.svg'), linear-gradient(0deg, #056e12, #FFFFFF); }
+a.color17:hover  { background: url('./assets/imgsvg.svg'), linear-gradient(0deg, #e793ac, #FFFFFF); }
+a.color18:hover  { background: url('./assets/mandala.svg'), linear-gradient(0deg, #25919d, #FFFFFF);  }
+a.color19:hover  { background: url('./assets/blog.svg'), linear-gradient(0deg, #f5943b, #FFFFFF); }
+a.color20:hover  { background: url('./assets/blog.svg'), linear-gradient(0deg, #c098fd, #FFFFFF); }
 
-@keyframes bl {
-  from { background-position: 0 0, 0 0; }
-  to {background-position: -64px 64px, 0 0;}
+:root {
+  --base: 200ms;
+  --delay: 250ms;
 }
-@keyframes br {
-  from { background-position: 0 0, 0 0; }
-  to {background-position: 64px 64px, 0 0;}
+
+div.title, div.footer {
+  transform: translateX(-100vw);
+  animation-name: slideheaderbox;
+  animation-duration: calc(var(--base) * 4);
+  animation-delay: 0;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
 }
-@keyframes tr {
-  from { background-position: 0 0, 0 0; }
-  to {background-position: 64px -64px, 0 0;}
+
+@keyframes slideheaderbox {
+  from {
+    transform: translateX(-100vw);  }
+  to {
+    transform: translateX(0vw);}
 }
-@keyframes tl {
-  from { background-position: 0 0, 0 0; }
-  to {background-position: -64px -64px, 0 0;}
+
+
+div.title > h1 {
+  transform: translateX(30vw);
+  animation-name: slideheader;
+  animation-duration: calc(var(--delay) * 4);
+  animation-delay: calc(var(--base) * 5);
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.1);
 }
+
+@keyframes slideheader {
+  from {
+    transform: translateX(30vw);  }
+  to {
+    transform: translateX(0vw);}
+}
+
+a {
+  animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.01);
+}
+
+a.color1 { animation-delay: calc(var(--delay) * 0); }
+a.color2 { animation-delay: calc(var(--delay) * 1); }
+a.color3 { animation-delay: calc(var(--delay) * 2); }
+a.color4 { animation-delay: calc(var(--delay) * 3); }
+a.color5 { animation-delay: calc(var(--delay) * 4); }
+a.color6 { animation-delay: calc(var(--delay) * 5); }
+a.color7 { animation-delay: calc(var(--delay) * 6); }
+a.color8 { animation-delay: calc(var(--delay) * 7); }
+a.color9 { animation-delay: calc(var(--delay) * 8); }
+a.color10 { animation-delay: calc(var(--delay) * 9); }
+a.color11 { animation-delay: calc(var(--delay) * 10); }
+a.color12 { animation-delay: calc(var(--delay) * 11); }
+a.color13 { animation-delay: calc(var(--delay) * 12); }
+a.color14 { animation-delay: calc(var(--delay) * 13); }
+a.color15 { animation-delay: calc(var(--delay) * 14); }
+a.color16 { animation-delay: calc(var(--delay) * 15); }
+a.color17 { animation-delay: calc(var(--delay) * 16); }
+a.color18 { animation-delay: calc(var(--delay) * 17); }
+a.color19 { animation-delay: calc(var(--delay) * 18); }
+a.color20 { animation-delay: calc(var(--delay) * 19); }
+
+@keyframes slidebox {
+  from {
+    transform: translateY(200vh);
+  }
+  to {
+    transform: translateY(0vh);
+  }
+}
+
+a.color1 > header { animation-delay: calc(var(--delay) * 0 + var(--base) * 6); }
+a.color2 > header { animation-delay: calc(var(--delay) * 1 + var(--base) * 6); }
+a.color3 > header { animation-delay: calc(var(--delay) * 2 + var(--base) * 6); }
+a.color4 > header { animation-delay: calc(var(--delay) * 3 + var(--base) * 6); }
+a.color5 > header { animation-delay: calc(var(--delay) * 4 + var(--base) * 6); }
+a.color6 > header { animation-delay: calc(var(--delay) * 5 + var(--base) * 6); }
+a.color7 > header { animation-delay: calc(var(--delay) * 6 + var(--base) * 6); }
+a.color8 > header { animation-delay: calc(var(--delay) * 7 + var(--base) * 6); }
+a.color9 > header { animation-delay: calc(var(--delay) * 8 + var(--base) * 6); }
+a.color10 > header { animation-delay: calc(var(--delay) * 9 + var(--base) * 6); }
+a.color11 > header { animation-delay: calc(var(--delay) * 10 + var(--base) * 6); }
+a.color12 > header { animation-delay: calc(var(--delay) * 11 + var(--base) * 6); }
+a.color13 > header { animation-delay: calc(var(--delay) * 12 + var(--base) * 6); }
+a.color14 > header { animation-delay: calc(var(--delay) * 13 + var(--base) * 6); }
+a.color15 > header { animation-delay: calc(var(--delay) * 14 + var(--base) * 6); }
+a.color16 > header { animation-delay: calc(var(--delay) * 15 + var(--base) * 6); }
+a.color17 > header { animation-delay: calc(var(--delay) * 16 + var(--base) * 6); }
+a.color18 > header { animation-delay: calc(var(--delay) * 17 + var(--base) * 6); }
+a.color19 > header { animation-delay: calc(var(--delay) * 18 + var(--base) * 6); }
+a.color20 > header { animation-delay: calc(var(--delay) * 19 + var(--base) * 6); }
+
+a.color1 > div { animation-delay: calc(var(--delay) * 0 + var(--base) * 10); }
+a.color2 > div { animation-delay: calc(var(--delay) * 1 + var(--base) * 10); }
+a.color3 > div { animation-delay: calc(var(--delay) * 2 + var(--base) * 10); }
+a.color4 > div { animation-delay: calc(var(--delay) * 3 + var(--base) * 10); }
+a.color5 > div { animation-delay: calc(var(--delay) * 4 + var(--base) * 10); }
+a.color6 > div { animation-delay: calc(var(--delay) * 5 + var(--base) * 10); }
+a.color7 > div { animation-delay: calc(var(--delay) * 6 + var(--base) * 10); }
+a.color8 > div { animation-delay: calc(var(--delay) * 7 + var(--base) * 10); }
+a.color9 > div { animation-delay: calc(var(--delay) * 8 + var(--base) * 10); }
+a.color10 > div { animation-delay: calc(var(--delay) * 9 + var(--base) * 10); }
+a.color11 > div { animation-delay: calc(var(--delay) * 10 + var(--base) * 10); }
+a.color12 > div { animation-delay: calc(var(--delay) * 11 + var(--base) * 10); }
+a.color13 > div { animation-delay: calc(var(--delay) * 12 + var(--base) * 10); }
+a.color14 > div { animation-delay: calc(var(--delay) * 13 + var(--base) * 10); }
+a.color15 > div { animation-delay: calc(var(--delay) * 14 + var(--base) * 10); }
+a.color16 > div { animation-delay: calc(var(--delay) * 15 + var(--base) * 10); }
+a.color17 > div { animation-delay: calc(var(--delay) * 16 + var(--base) * 10); }
+a.color18 > div { animation-delay: calc(var(--delay) * 17 + var(--base) * 10); }
+a.color19 > div { animation-delay: calc(var(--delay) * 18 + var(--base) * 10); }
+a.color20 > div { animation-delay: calc(var(--delay) * 19 + var(--base) * 10); }
+
+main > div.entrance {
+  opacity: 0;
+  animation-name: fadebackground;
+  animation-duration: calc(var(--delay) * 4);
+  animation-delay: calc(var(--base) * 4);
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadebackground {
+  from {
+    opacity: 0;
+  }
+    to {
+      opacity: 1;
+    }
+  }

@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <main>
         <div></div><div></div><div></div><div></div><div></div>
-        <div></div>
+        <div className="entrance"></div>
           <div className="title"><h1>Ooer</h1></div>
         <div className="spacer"></div>
         <div className="spacer"></div>
