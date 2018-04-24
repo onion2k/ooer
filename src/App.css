@@ -1,23 +1,42 @@
-main {
-  display: grid;
-  /* position: absolute; */
-  /* top: -15vw; */
-  left: 0;
-  bottom: 0;
-  /* overflow-x: hidden;
-  overflow-y: scroll; */
-  /* min-height: calc(100vh + 30vw); */
-  margin: 0;
-  /* grid-auto-rows: 50vw;
-  grid-template-columns: 100vw; */
+
+:root {
+  --base: 200ms;
+  --boxin: 100ms;
+  --delay: 250ms;
 }
 
-main > div {
+div.outer {
+  margin: -24vw -25vw -15vw -25vw;
+  display: grid;
+  grid-template-columns: repeat(5, 30vw);
+  grid-auto-rows: 30vw;
+  grid-gap: 4px;
+  grid-auto-flow: row dense;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: calc(100vh + 26vw);
+}
+
+div.outer > div {
   background-color: #FF4081;
   border-radius: 2px;
 }
 
-div.title, div.footer {
+div.outer > div.inner {
+  background-color: #000000;
+  grid-column: 2 / 5;
+  grid-row: 2 / 10;
+  display: grid;
+  /* grid-auto-rows: 30vw;
+  grid-template-columns: 100vw; */
+}
+
+div.inner > div {
+  background-color: #FF4081;
+  border-radius: 2px;
+}
+
+div.inner > div.title, div.inner > div.footer {
   display: grid;
   background-color: #ffffff;
   font-family: 'Heebo';
@@ -33,13 +52,12 @@ div.title, div.footer {
 }
 
 div.title {
-  grid-column: 2 / 5;
+  grid-column: 1 / 4;
 }
 
 div.footer {
-  grid-column: 18 / 22;
+  grid-column: 1 / 4;
 }
-
 
 h1 {
   margin: 0 -1.0rem -6.0rem 0;
@@ -55,25 +73,14 @@ h2 {
 
 
 @media screen and (min-width: 600px) {
-  /* div.spacer {
-    display: block;
-  } */
-  main {
-    max-height: calc(100vh + 30vw);
-    /* margin: 0 -7.5vw -50vw -7.5vw; */
-    grid-auto-columns: 30vw;
-    grid-template-rows: 15vw repeat(3, 15vw) 15vw;
-    grid-gap: 4px;
-    grid-auto-flow: column;
-    /* transform: rotate(-2deg);
-    transform-origin: right top; */
+  div.outer {
+    transform: rotate(-2deg);
   }
-}
-
-:root {
-  --base: 200ms;
-  --boxin: 100ms;
-  --delay: 250ms;
+  div.inner {
+    grid-auto-rows: 30vw;
+    grid-template-columns: repeat(3, 30vw);
+    grid-gap: 4px;
+  }
 }
 
 div.title, div.footer {
@@ -108,7 +115,7 @@ div.title > h1 {
     transform: translateX(0vw);}
 }
 
-main > div.entrance {
+div.inner > div.entrance {
   opacity: 0;
   animation-name: fadebackground;
   animation-duration: calc(var(--delay) * 4);

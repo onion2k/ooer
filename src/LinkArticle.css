@@ -8,11 +8,11 @@ article {
   text-decoration: none;
   background-blend-mode: overlay;
   background-position: 0 0, 0 0;
-  /* transform: translateY(200vh);
+  transform: translateY(200vh);
   animation-name: slidebox;
   animation-duration: calc(var(--delay) * 4);
   animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.01); */
+  animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.01);
   border-radius: 2px;
 }
 
