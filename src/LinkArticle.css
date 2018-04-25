@@ -19,15 +19,9 @@ article {
 article > header {
   font-family: 'Heebo';
   font-weight: 900;
-  font-size: 5.0rem;
-  line-height: 5.0rem;
-  vertical-align: baseline;
-  transform: rotate(-90deg) translateY(-3.75rem) translateX(-30vw);
-  transform-origin: right top;
-  animation-name: slidein;
-  animation-iteration-count: 1;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+  font-size: 2.0rem;
+  line-height: 2.0rem;
+  padding: 15px;
 }
 
 @keyframes slidein {
@@ -40,13 +34,7 @@ article > header {
 }
 
 article > div {
-  align-self: flex-end;
-  transform: translateY(-3vw);
-  opacity: 0;
-  animation-name: slidedown;
-  animation-iteration-count: 1;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+
 }
 
 @keyframes slidedown {
@@ -61,10 +49,10 @@ article > div {
 }
 
 p {
-  margin: 0 4.0rem 0 0;
-  padding: 30px;
-  transition: all 0.2s ease;
+  margin: 0;
+  padding: 0 15px;
   color: #000000;
+  font-size: 0.8rem;
 }
 
 
@@ -181,3 +169,35 @@ article.color17 > div { animation-delay: calc(var(--delay) * 16 + var(--base) * 
 article.color18 > div { animation-delay: calc(var(--delay) * 17 + var(--base) * 6); }
 article.color19 > div { animation-delay: calc(var(--delay) * 18 + var(--base) * 6); }
 article.color20 > div { animation-delay: calc(var(--delay) * 19 + var(--base) * 6); }
+
+@media screen and (min-width: 600px) {
+  article > header {
+    font-family: 'Heebo';
+    font-weight: 900;
+    font-size: 5.0rem;
+    line-height: 5.0rem;
+    vertical-align: baseline;
+    transform: rotate(-90deg) translateY(-3.75rem) translateX(-30vw);
+    transform-origin: right top;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  article > div {
+    align-self: flex-end;
+    transform: translateY(-3vw);
+    opacity: 0;
+    animation-name: slidedown;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  p {
+    margin: 0 4.0rem 0 0;
+    padding: 30px;
+    transition: all 0.2s ease;
+    color: #000000;
+    font-size: 1.0rem;
+  }
+}

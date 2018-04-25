@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div className="outer">
         <div></div><div></div><div></div><div></div><div></div>
-        <div></div><div></div><div></div><div></div><div></div>
+        <div className="entrance"></div><div></div><div></div><div></div><div></div>
         <div className="inner">
           <div className="title"><h1>Ooer</h1></div>
           {links}
