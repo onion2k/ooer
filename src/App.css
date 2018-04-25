@@ -1,64 +1,172 @@
-main > div {
+
+:root {
+  --base: 200ms;
+  --boxin: 100ms;
+  --delay: 250ms;
+}
+
+div.outer {
+
+}
+
+div.outer > div {
+  display: none;
+}
+
+div.outer > div.inner {
+  background-color: #000000;
   display: grid;
-  height: 100vh;
-  grid-template-rows: 3fr 1fr;
+  grid-auto-rows: 30vmin;
   grid-template-columns: 1fr;
-  align-items: center;
-  justify-content: center;
-  background-image: url('topography.png');
+}
+
+div.inner > div {
+  display: none;
+}
+
+div.inner > div.title, div.inner > div.footer {
+  display: grid;
+  background-color: #ffffff;
+  font-family: 'Heebo';
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+  align-items: flex-end;
+  justify-items: flex-start;
 }
 
 h1 {
-  padding:0;
-  margin: 0;
-  align-self: center;
-  justify-self: center;
-  text-transform: uppercase;
-  line-height: 1.0rem;
-  font-size: 40vmin;
-  color: rgba(0,0,0,0.5);
-  transform: rotate(0);
-  filter: invert(55%) blur(2px);
+  font-size: 1.5rem;
+  margin: 0 15px;
+  padding: 0;
 }
 
-nav {
-  width: 80vw;
-  align-self: flex-end;
-  justify-self: center;
-  justify-content: space-evenly;
-  margin-bottom: 5vh;
-  transform: rotate(0);
-}
-
-a {
-  display: inline-block;
-  font-variant: small-caps;
-  text-transform: uppercase;
-  line-height: 1.0rem;
+h2 {
   font-size: 1.0rem;
-  margin: 0.4rem 0.5rem;
-  text-decoration: none;
-  transition: 0.15s transform linear, 0.15s text-shadow linear;
-  color: #888;
+  margin: 0 15px;
+  padding: 0;
 }
 
-@media (min-width: 600px) {
+div.title {
+  grid-column: 1 / 2;
+}
+
+div.footer {
+  grid-column: 1 / 2;
+}
+
+div.title, div.footer {
+  transform: translateX(-100vw);
+  animation-name: slideheaderbox;
+  animation-duration: calc(var(--base) * 4);
+  animation-delay: 0;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes slideheaderbox {
+  from {
+    transform: translateX(-100vw);  }
+  to {
+    transform: translateX(0vw);}
+}
+
+div.entrance {
+  opacity: 0;
+  animation-name: fadebackground;
+  animation-duration: calc(var(--delay) * 4);
+  animation-delay: calc(var(--base) * 4);
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadebackground {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  div.outer {
+    display: grid;
+    margin: -24vw -25vw -15vw -25vw;
+    grid-template-columns: repeat(5, 30vw);
+    grid-auto-rows: 30vw;
+    grid-gap: 4px;
+    grid-auto-flow: row dense;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: calc(100vh + 26vw);
+    transform: rotate(-2deg);
+  }
+  div.outer > div {
+    display: block;
+    background-color: #FF4081;
+    border-radius: 2px;
+  }  
+  div.outer > div.inner {
+    background-color: #000000;
+    grid-column: 2 / 5;
+    grid-row: 2 / 10;
+    display: grid;
+    grid-auto-rows: 30vw;
+    grid-template-columns: repeat(3, 30vw);
+    grid-gap: 4px;
+  }
+  div.inner > div {
+    background-color: #FF4081;
+    border-radius: 2px;
+  }
+  div.title {
+    grid-column: 1 / 4;
+    border-radius: 2px;
+  }
+  
+  div.footer {
+    grid-column: 1 / 4;
+  }
+
+  div.inner > div.title, div.inner > div.footer {
+    display: grid;
+    background-color: #ffffff;
+    font-size: 6.0rem;
+    padding: 0;
+    align-items: flex-end;
+    justify-items: flex-end;
+    overflow: hidden;
+    transform: translateX(-100vw);
+    border-radius: 2px;
+  }
+
+  div.title > h1 {
+    transform: translateX(30vw);
+    animation-name: slideheader;
+    animation-duration: calc(var(--delay) * 4);
+    animation-delay: calc(var(--base) * 5);
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.1);
+  }
+  
   h1 {
-    filter: invert(25%) blur(2px);
+    font-size: 12.0rem;
+    margin: 0 -1.0rem -6.0rem 0;
+    padding: 0;
   }
-  nav { 
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  a {
-    line-height: 1.2rem;
-    font-size: 1.2rem;
-  }
-}
 
-a:hover {
-  color: #f00;
-  transform: scale(1.1);
-  z-index: 99;
+  h2 {
+    justify-self: flex-start;
+    font-size: 4.0rem;
+    margin: 0 0 -2.0rem -0.5rem;
+    padding: 0;
+  }
+
+  @keyframes slideheader {
+    from {
+      transform: translateX(30vw);  }
+    to {
+      transform: translateX(0vw);}
+  }
+
 }
