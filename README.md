@@ -1,3 +1,7 @@
 Ooer Home
 
-New version coming soon!
+TODO:
+
+* More breakpoints. Tablet mode.
+* Remove hover effect
+* Shader header?
