@@ -144,18 +144,19 @@ article.color18 > div { animation-delay: calc(var(--delay) * 17 + var(--base) * 
 article.color19 > div { animation-delay: calc(var(--delay) * 18 + var(--base) * 6); }
 article.color20 > div { animation-delay: calc(var(--delay) * 19 + var(--base) * 6); }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 900px) {
   article {
     border-radius: 2px;
   }
   article > header {
+    height: 5.0rem;
+    width: 30vw;
     font-family: 'Heebo';
     font-weight: 900;
     font-size: 5.0rem;
-    line-height: 5.0rem;
     vertical-align: baseline;
-    transform: rotate(-90deg) translateY(-5.0rem) translateX(-30vw);
-    transform-origin: right top;
+    transform: rotate(-90deg) translateY(14vw) translateX(-60vw);
+    transform-origin: center center;
     animation-name: slidein;
     animation-iteration-count: 1;
     animation-duration: 1s;
@@ -181,10 +182,10 @@ article.color20 > div { animation-delay: calc(var(--delay) * 19 + var(--base) * 
 
 @keyframes slidein {
   from {
-    transform: rotate(-90deg) translateY(-5.0rem) translateX(-30vw);
+    transform: rotate(-90deg) translateY(14vw) translateX(-60vw);
   }
   to {
-    transform: rotate(-90deg) translateY(-5.0rem) translateX(0px);
+    transform: rotate(-90deg) translateY(14vw) translateX(-10vw);
   }
 }
 
