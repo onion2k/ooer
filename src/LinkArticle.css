@@ -23,6 +23,11 @@ article > header {
   padding: 15px;
 }
 
+article > div {
+  align-self: flex-end;
+  margin-bottom: 15px;
+}
+
 p {
   margin: 0;
   padding: 0 15px;

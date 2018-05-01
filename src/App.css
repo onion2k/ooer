@@ -71,28 +71,11 @@ div.title, div.footer {
     transform: translateX(0vw);}
 }
 
-div.entrance {
-  opacity: 0;
-  animation-name: fadebackground;
-  animation-duration: calc(var(--delay) * 4);
-  animation-delay: calc(var(--base) * 4);
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadebackground {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @media screen and (min-width: 600px) {
 
   div.outer {
     display: grid;
-    margin: -20vw -15vw 0 -15vw;
+    margin: -20vw -10vw 0 -10vw;
     grid-template-columns: 20vw 40vw 40vw 20vw;
     grid-auto-rows: 25vw;
     grid-gap: 4px;
@@ -206,4 +189,20 @@ div.entrance {
     grid-column: 1 / 4;
   }
 
+  div.entrance {
+    opacity: 0;
+    animation-name: fadebackground;
+    animation-duration: calc(var(--delay) * 4);
+    animation-delay: calc(var(--base) * 4);
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadebackground {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
